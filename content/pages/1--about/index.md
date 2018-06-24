@@ -2,24 +2,17 @@
 title: About
 ---
 
-This is a demo site of the [PersonalBlog](https://github.com/greglobinski/gatsby-starter-personal-blog) GatsbyJS starter.
+Hello. How are you today ? This is a community blog for sharing knowldge about JavaScript programming language and its ecosystem (frameworks, libraries). I hope it is fun, and receive your feedback about it. This blog is built based on Gatsby Starter Blog Project, and you can find it in here [PersonalBlog](https://github.com/greglobinski/gatsby-starter-personal-blog) GatsbyJS starter.
 
-The starter is a ready to use, easy to customize 'like theme' starter. It has everything what blog should have and some more.
+The blog focus on the following topics:
 
 ### Standard features:
 
-* Easy editable content in **Markdown** files (posts, pages and parts)
-* **SEO** (sitemap generation, robot.txt, meta and OpenGraph Tags)
-* **Social** sharing (Twitter, Facebook, Google, LinkedIn)
-* **Comments** (Facebook)
+* **JavaScripts** (JS for short), CSS, and HTML, they are the core technologies of World Wide Web
+* **React**, a JavaScript library for building user interface
+* **React Native**, building native mobile app using JavaScripts and React
+* **GraphQL**, an alternative to REST, it is a data query language published in 2015 by Facebooks
 * **Images** lazy loading and `webp` support (gatsby-image)
-* Post **categories** (post list filtering)
-* Full text **searching** (Algolia)
-* **Contact** form (Netlify form handling)
-* **RSS** feed
-* **PWA** (manifes.json, offline support, favicons)
-* Google **Analytics**
-* **Favicons** generator (node script)
 * **Material UI** (@next)
 
 ### Advanced features:
