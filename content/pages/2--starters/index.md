@@ -1,5 +1,5 @@
 ---
-title: Other GatsbyJs starters
+title: Projects
 menuTitle: My starters
 ---
 
