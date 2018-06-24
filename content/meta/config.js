@@ -25,8 +25,17 @@ module.exports = {
   contactEmail: "anhlt1983@gmail.com",
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
+    {
+      name: "github",
+      url: "https://github.com/aletuan"
+    },
+    {
+      name: "twitter",
+      url: "https://twitter.com/tuananhle83"
+    },
+    {
+      name: "facebook",
+      url: "https://www.facebook.com/tuananh.le"
+    }
   ]
 };
