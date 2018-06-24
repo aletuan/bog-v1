@@ -2,4 +2,4 @@
 title: info
 ---
 
-I am a front-end web developer. I used to be a web designer also, but now I concentrate on the code.
+I'm a software developer living in Brunswick, Melbourne. Starting as a Java developer, but now i concentrate on the full-stack development
