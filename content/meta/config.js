@@ -4,13 +4,13 @@ module.exports = {
   siteTitle: "Programmer Blog", // <title>
   shortSiteTitle: "PersonalBlog GatsbyJS Starter", // <title> ending for posts and pages
   siteDescription: "Programmer Blog.",
-  siteUrl: "https://gatsby-starter-personal-blog.greglobinski.com",
+  siteUrl: "https://andyfiles.com/",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
   // author
   authorName: "Andy Le",
-  authorTwitterAccount: "greglobinski",
+  authorTwitterAccount: "tuananhle83",
   // info
   infoTitle: "Andy Le",
   infoTitleNote: "blog",
