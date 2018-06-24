@@ -8,7 +8,7 @@ This is a community blog for sharing knowldge about JavaScript programming langu
 
 The blog focus on the following topics:
 
-### Core categories:
+### Core topics:
 
 * **JavaScripts** (JS for short), CSS, and HTML, they are the core technologies of World Wide Web
 * **Node.js**, JS runtime built on Chrome's V8 JavaScript engine
@@ -16,6 +16,6 @@ The blog focus on the following topics:
 * **React Native**, building native mobile app using JavaScripts and React
 * **GraphQL**, an alternative to REST, it is a data query language published in 2015 by Facebooks
 
-### Extending categories:
+### Extending topics:
 
 * `Thinking`
