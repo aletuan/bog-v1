@@ -1,6 +1,6 @@
 ---
-title: How to customize the PersonalBlog starter's appearance
-subTitle: GatsbyJS starter instruction
+title: JavaScripts mistery
+subTitle: Misteries about JavaScripts in w3schools
 cover: photo-1463852247062-1bbca38f7805-cover.jpg
 ---
 

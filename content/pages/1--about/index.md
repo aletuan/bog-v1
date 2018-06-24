@@ -14,8 +14,8 @@ The blog focus on the following topics:
 * **Node.js**, JS runtime built on Chrome's V8 JavaScript engine
 * **React**, a JavaScript library for building user interface
 * **React Native**, building native mobile app using JavaScripts and React
-* **GraphQL**, an alternative to REST, it is a data query language published in 2015 by Facebooks
+* **GraphQL**, an alternative to `REST`, it is a data query language published in 2015 by Facebooks
 
 ### Extending topics:
 
-* `Thinking`
+* *Thinking*
