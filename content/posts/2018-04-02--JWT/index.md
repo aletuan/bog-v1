@@ -67,7 +67,7 @@ HMACSHA256(
 
 ## How JSON Web Token works
 
-![unsplash.com](./photo-passportjs-steps.png)
+![](./photo-passportjs-steps.png)
 
 	1. Client login successfully using their credentials. Server return client with a JSON Web Token.
 	2. When client request an access to a protected route or resource, client attach JWT in its request
@@ -75,62 +75,7 @@ HMACSHA256(
 
 Following example using `jsonwebtoken` package for login process and return token when login is successed.
 
-```js
-// file: ./routes/users.js
-
-// @route GET api/users/login
-// @desc Login user / Return JWT Token
-// @access Public
-router.post('/login', (req, res) => {
-   const email = req.body.email;
-   const password = req.body.password;
-
-   // Find user by e-mail
-   User.findOne({
-         email
-      })
-      .then(user => {
-         // Check for user
-         if (!user) {
-            return res.status(404).json({
-               email: 'User not found'
-            });
-         }
-         // Check password
-         bcrypt.compare(password, user.password)
-            .then(isMatch => {
-               if (isMatch) {
-                  // User match
-                  // Create JWT payload
-                  const payload = {
-                     id: user.id,
-                     name: user.name,
-                     avatar: user.avatar
-                  }
-                  // Sign token, with expired in 1 hour
-                  // Using Bearer schema
-                  jwt.sign(
-                     payload,
-                     keys.secretOrKey, {
-                        expiresIn: 3600
-                     },
-                     (err, token) => {
-                        res.json({
-                           success: true,
-                           token: 'Bearer ' + token
-                        });
-                     }
-                  );
-
-               } else {
-                  return res.status(400).json({
-                     password: 'Password incorrect'
-                  })
-               }
-            })
-      })
-});
-```
+![](./photo-passportjs-token-create.png)
 
 ## Application
 * Authorisation: once user logged in, each subsequent request will include the JWT token, allowing the user to access routes, services, and resources that are permitted with that token.
