@@ -63,3 +63,80 @@ HMACSHA256(
   base64UrlEncode(payload),
   secret)
 ```
+
+## How JSON Web Token works
+
+![unsplash.com](./photo-passportjs-steps.png)
+
+	1. Client login successfully using their credentials. Server return client with a JSON Web Token.
+	2. When client request an access to a protected route or resource, client attach JWT in its request
+	3. Server extract token from request, involve specific logic to validate it (for example, check database)
+
+Following example using `jsonwebtoken` package for login process and return token when login is successed.
+
+```js
+// file: ./routes/users.js
+
+// @route GET api/users/login
+// @desc Login user / Return JWT Token
+// @access Public
+router.post('/login', (req, res) => {
+   const email = req.body.email;
+   const password = req.body.password;
+
+   // Find user by e-mail
+   User.findOne({
+         email
+      })
+      .then(user => {
+         // Check for user
+         if (!user) {
+            return res.status(404).json({
+               email: 'User not found'
+            });
+         }
+         // Check password
+         bcrypt.compare(password, user.password)
+            .then(isMatch => {
+               if (isMatch) {
+                  // User match
+                  // Create JWT payload
+                  const payload = {
+                     id: user.id,
+                     name: user.name,
+                     avatar: user.avatar
+                  }
+                  // Sign token, with expired in 1 hour
+                  // Using Bearer schema
+                  jwt.sign(
+                     payload,
+                     keys.secretOrKey, {
+                        expiresIn: 3600
+                     },
+                     (err, token) => {
+                        res.json({
+                           success: true,
+                           token: 'Bearer ' + token
+                        });
+                     }
+                  );
+
+               } else {
+                  return res.status(400).json({
+                     password: 'Password incorrect'
+                  })
+               }
+            })
+      })
+});
+```
+
+## Application
+* Authorisation: once user logged in, each subsequent request will include the JWT token, allowing the user to access routes, services, and resources that are permitted with that token.
+
+* Information Exchange: transmitting information securely between parties. JWT can be signed, using public / private key pair - so receivers can confirm that senders are who they say they are. 
+
+Additionally, the signature is calculated using the header and payload, so receiver can also verify that the content within JWT has not been tampered by others.
+
+## Closing
+JSON Web Token is open standard for creating access token. It is compact because of its small size that can be sent through a URL or POST parameters. It is self-contained when including all required information about user. With such advantages, developer can utilize JWT to create truly stateless Web APIs.

@@ -103,7 +103,5 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
 ```
  
-## Conclusion
-In modern web application, authentication can take a variety of form. As a middleware for Node application, Passport recognizes  that requirements, and provides various authentication mechanism (known as strategies), packages each strategy as individual module, apply them depending on the application’s requirements. 
-
-Tag: #javascript #passport #authentication #security
+## Closing
+In modern web application, authentication can take a variety of form. As a middleware for Node application, Passport recognizes  that requirements, and provides various authentication mechanism (known as strategies), packages each strategy as individual module, apply them depending on the application’s requirements.
