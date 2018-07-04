@@ -172,5 +172,39 @@ for (var property1 in object1) {
 console.log(string1);
 ```
 
+Map is a structure to keep data as [key, value]. Unlike object, Map can use any value as key to keep the value.
+
+To init and update content, Map uses functions:
+
+```js
+const map = new Map([[]])
+map.has(key)  // boolean
+map.set(key, value)
+map.get(key) // value
+map.delete(key)
+```
+
+To inspect Map content, using functions
+
+```js
+map.size       returns its size
+map.entries()  returns entries in insertion order [k,v]
+map.keys()     returns just values in insertion order [k]
+map.values()   returns just values in insertion order [v]
+```
+
+For example:
+
+```js
+const m = new Map([[]]);
+m.set(1, 'a');
+m.set(2, 'b');
+// entries iteration
+for(let i of m) {
+   console.log(i);
+}
+// print key - value
+m.forEach((key, value) => console.log(`${key} - ${value}`));
+```
 
 
