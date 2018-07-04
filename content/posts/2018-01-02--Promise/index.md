@@ -120,3 +120,5 @@ async function addAll(){
 }
 addAll()
 ```
+
+Asynchronous is the key of success of JavaScript or Nodejs run-time environment. It makes application process not to be blocked on I/O operation (i.e, file read/write, http req/res) and increasing memory efficiency in the application.
