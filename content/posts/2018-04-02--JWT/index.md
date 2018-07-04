@@ -69,9 +69,9 @@ HMACSHA256(
 
 ![](./photo-passportjs-steps.png)
 
-	1. Client login successfully using their credentials. Server return client with a JSON Web Token.
-	2. When client request an access to a protected route or resource, client attach JWT in its request
-	3. Server extract token from request, involve specific logic to validate it (for example, check database)
+1. Client login successfully using their credentials. Server return client with a JSON Web Token.
+2. When client request an access to a protected route or resource, client attach JWT in its request
+3. Server extract token from request, involve specific logic to validate it (for example, check database)
 
 Following example using `jsonwebtoken` package for login process and return token when login is successed.
 
