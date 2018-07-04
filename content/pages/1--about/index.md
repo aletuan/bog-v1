@@ -15,9 +15,13 @@ The blog focus on the following topics:
 * **React**, a JavaScript library for building user interface
 * **React Native**, building native mobile app using JavaScripts and React
 * **GraphQL**, an alternative to `REST`, it is a data query language published in 2015 by Facebooks
-* **Spring**, most common web framework for enterprise applications
 
 ### Extending topics:
 
+* **Spring**, most common web framework for enterprise applications
 * **Software architecture**, design patterns, solid principles, serverless topics etc..
+* **DevOps**, combination between company philosophies, automation tools and processes, DevOps making software development more agile
+* **AWS**, making a scalable application, we can live witouth clouds
+* **Software process**, Agile, Scrum, Waterfall models is a must to delivey any qualified product
+* **Testing**, some developer may hate it, but it is a safe belt for all
 
