@@ -1,7 +1,7 @@
 ---
 title: Passportjs with JWT
 subTitle: Passportjs with JWT
-cover: photo-jwt_05-cover.jpg
+cover: photo-passportjs-cover.png
 ---
 
 ## Definition
