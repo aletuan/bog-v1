@@ -22,6 +22,7 @@ The header typically includes two parts: the token type (which is JWT), and the 
 For example:
 
 ```js
+{
 	"alg": "HS256",
 	"typ": "JWT"
 }
