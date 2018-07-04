@@ -1,50 +1,65 @@
 ---
 title: JSON Web Token
 subTitle: JSON Web Token
-cover: photo-1463852247062-1bbca38f7805-cover.jpg
+cover: photo-passportjs-cover.jpg
 ---
 
-The [starter](/gatsby-starter-personal-blog/) uses a theme object so base customization is really easy.
+> JSON We bTokens - [JSON Web Tokens - jwt.io](https://jwt.io/) is an open, industry standard RFC 7519 methods for representing 	claims securely between two parties as JSON object.  
 
-Find the `theme.js` file.
+## Structure
+JSON Web Token consist of three sections separated by the dot (.):
 
-```text
-root
-  ├── src
-  │   ├── styles
-  │   │   ├── colors.js
-  │   │   ├── globals.js
-  │   │   └── theme.js
+	* Header
+	* Payload (`Claims`)
+	* Signature
+
+Let go into the details content  of each sections
+
+### Header
+
+The header typically includes two parts: the token type (which is JWT), and the hashing algorithm being used (such as HMAC SHA256 or RSA).
+
+For example:
+
+```js
+	"alg": "HS256",
+	"typ": "JWT"
+}
 ```
 
-...
+Then this header is encoded by `Base64Url` to become another value:
 
-#### Front-end web development
+```js
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+```
 
-To read the whole instruction article - [How to customize the personalBlog starter's appearance](https://dev.greglobinski.com/customize-personal-blog-starter/) - you have to move to [Front-end web development with Greg](https://dev.greglobinski.com) website.
+### Payload
 
-...
+This section contains the claims. Claims are statements about an entity (for example, user information - id, name, email) and additional data.  
 
-Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
+There are three types of claims: *registered, pubic and private claims*. Note that the claims name are only three characters long.
 
-![unsplash.com](./photo-1463852247062-1bbca38f7805.jpg)
+An example of payload including only private claims:
 
-Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst.
+```js
+{
+   "sub": "1234567890",
+   "name": "John Doe",
+   "admin": true
+}
+```
 
-Fusce a metus eu diam varius congue nec nec sapien. Nunc convallis accumsan justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec malesuada vehicula lectus, viverra sodales ipsum gravida nec. Integer gravida nisi ut magna mollis molestie. Nullam pharetra accumsan sagittis. Proin tristique rhoncus orci, eget vulputate nisi sollicitudin et. Quisque lacus augue, mollis non mollis et, ullamcorper in purus. Morbi et sem orci.
+The payload is also Base64Url encoded as same way as header encoding.
 
-### Vestibulum orci tortor, sollicitudin ac euismod non, placerat ac augue.
+### Signature
 
-Praesent accumsan odio in ante ullamcorper id pellentesque mauris rhoncus. Duis vitae neque dolor. Duis sed purus at eros bibendum cursus nec a nulla. Donec turpis quam, ultricies id pretium sit amet, gravida eget leo.
+The signature is used to verify the message wasn’t changed along the way. If signature is signed with a private key, it can also verify the identity of JWT sender.
 
-Proin ornare ligula eu tellus tempus elementum. . Vestibulum non nibh risus, a scelerisque purus. Ut vel arcu ac tortor adipiscing hendrerit vel sed massa. Fusce sem libero, lacinia vulputate interdum non, porttitor non quam. Aliquam sed felis ligula. Duis non nulla magna.
+To create the signature, we take the encoded header and encoded payload, a secret key, and the algorithm specified in the header, and sign that.
 
-### Aenean bibendum iaculis mi, nec blandit lacus interdum vitae
-
-Nullam eros mi, mollis in sollicitudin non, tincidunt sed enim. Sed et felis metus, rhoncus ornare nibh. Ut at magna leo. Suspendisse egestas est ac dolor imperdiet pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
-### Donec hendrerit laoreet risus eget adipiscing.
-
-Proin suscipit luctus orci placerat fringilla. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, bibendum eu pulvinar vel, sodales vitae dui. Pellentesque sed sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
-
-Fusce a metus eu diam varius congue nec nec sapien. Nunc convallis accumsan justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec malesuada vehicula lectus, viverra sodales ipsum gravida nec. Integer gravida nisi ut magna mollis molestie. Nullam pharetra accumsan sagittis. Proin tristique rhoncus orci, eget vulputate nisi sollicitudin et. Quisque lacus augue, mollis non mollis et, ullamcorper in purus. Morbi et sem orci.
+```js
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+```

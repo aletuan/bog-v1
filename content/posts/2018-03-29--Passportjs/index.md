@@ -61,7 +61,7 @@ const keys = require('../config/keys');
 
 const opts = {};
 
-// extractor look for JWT in authorization header with 'bearer' schema
+// extracte JWT in authorization header with 'bearer' schema
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 opts.secretOrKey = keys.secretOrKey;
 
