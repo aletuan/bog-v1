@@ -1,7 +1,7 @@
 ---
 title: New features of ES6
 subTitle: Just another introduce about son of
-cover: photo-es6-cover.png
+cover: photo-es6-cover.jpg
 ---
 
 In 2018, it is like out of date, when we are talking about ECMAScript 6 introduced in 2015. But since ES7 is still quite new, and personally I think it does not include many interesting features like ES6. So let turn back *old time* and recap again about ES6 *new*  features
@@ -46,4 +46,74 @@ try {
   // therefore, we will see catching error message
   console.log('i does not exist here!');
 }
+```
+
+### Class and inheritance
+
+This fancy syntax is introduced to make OOP people to be more happier. Very similar as Java, C# languages, JS now include some new keywords like `class, constructor, extends, super and get` (why not set ?). Unfortunately, there are no keywords for private methods or properties
+
+```js
+class Polygon {
+  constructor(height, width) { //class constructor
+    this.name = 'Polygon';
+    this.height = height;
+    this.width = width;
+  }
+
+  sayName() { //class method
+    console.log('Hi, I am a', this.name + '.');
+  }
+}
+
+class Square extends Polygon {
+  constructor(length) {
+    super(length, length); //call the parent method with super
+    this.name = 'Square';
+  }
+
+  get area() { 
+    return this.height * this.width;
+  }
+}
+
+let s = new Square(5);
+
+s.sayName(); // Hi, I am a Square.
+console.log(s.area); // 25
+```
+
+Without this sugar syntax, in ES5, developer has to make code to be more complex by using Prototype for inheritance
+
+```js
+function Polygon(height, width) { //class constructor
+  this.name = 'Polygon';
+  this.height = height;
+  this.width = width;
+}
+
+Polygon.prototype = {
+  sayName: function () { //class method
+    console.log('Hi, I am a ' + this.name + '.');
+  }
+};
+
+function Square(length) { //class constructor
+  Polygon.call(this, length, length);
+  this.name = 'Square';
+}
+// Square inherits from Polygon
+Square.prototype = Object.create(Polygon.prototype);
+// Set the "constructor" property to refer to Square
+Square.prototype.constructor = Square;
+// Add getter
+Square.prototype.getArea = function() { //class method
+  return this.height * this.width;
+};
+
+var p = new Polygon(5,5);
+p.sayName(); // Hi, I am a Polygon.
+
+var s = new Square(5);
+s.sayName(); // Hi, I am a Square.
+console.log(s.getArea()); // 25
 ```
