@@ -10,9 +10,8 @@ There are the features that will be covered in the following sections:
 
 * Arrow functions and let keyword; block scope
 * Classes and inheritance
-* Default parameters
-* Destructured assignment
-* Generator, Interator and Maps
+* Destructured assignment, Default parameters
+* Interator and Maps
 * Promises; Rest parameters; Set
 * Spread operator; Template literals
 
@@ -117,3 +116,61 @@ var s = new Square(5);
 s.sayName(); // Hi, I am a Square.
 console.log(s.getArea()); // 25
 ```
+
+### Destructured assignment, Default parameters
+
+Default parameters and destructured assignment are some improvements that make coding is more compact and easier. Let an example to explain it to save our time
+
+Default parameters
+
+```js
+function sayMsg(msg){
+  var msg = msg || 'This is a default message.';
+  console.log(msg);
+}
+
+sayMsg();  // This is a default message.
+sayMsg('This is a different message!'); // This is a different message!
+```
+
+Destructured assignment (applied for both array and object struct)
+
+```js
+let [one, two] = [1, 2];
+let {three, four} = {three: 3, four:  4};
+
+console.log(one, two, three, four); // 1 2 3 4
+```
+
+### Interator and Maps
+
+Iterators in JavaScript is quite similar as `IEnumerable` in .NET and `Iterable` in Java.
+
+For example:
+
+```js
+let arr = [1, 2, 3];
+let sum = 0;
+
+for (let v of arr) {
+  sum += v;
+}
+
+console.log('1 + 2 + 3 =', sum);
+```
+
+> Note that the syntax `for ... of` and `for ... in` are different since `for ... in` is applied to iterate the object properties
+
+```js
+var string1 = "";
+var object1 = {a: 1, b: 2, c: 3};
+
+for (var property1 in object1) {
+  string1 = string1 + object1[property1];
+}
+
+console.log(string1);
+```
+
+
+
