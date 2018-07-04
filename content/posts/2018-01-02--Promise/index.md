@@ -120,5 +120,3 @@ async function addAll(){
 }
 addAll()
 ```
-
-#javascript
