@@ -1,11 +1,11 @@
 ---
-title: SPassport with JWT
-subTitle: Passport with JWT
+title: Passportjs with JWT
+subTitle: Passportjs with JWT
 cover: photo-jwt_05-cover.jpg
 ---
 
 ## Definition
-> Password is an authentication middleware for Node.js. It include a comprehensive set of strategies (`500 ways`) support authentication using: username/password, Facebook, Twitter and more .  
+> Passportjs is an authentication middleware for Node.js. It include a comprehensive set of strategies (`500 ways`) support authentication using: username/password, Facebook, Twitter and more .  
 
 It is simple to authenticate request with **Passport** by using API `passport.authenticate`, with define which strategy we want to apply. 
 

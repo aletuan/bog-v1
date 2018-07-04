@@ -1,6 +1,6 @@
 ---
-title: JavaScripts mistery
-subTitle: Misteries about JavaScripts in w3schools
+title: JSON Web Token
+subTitle: JSON Web Token
 cover: photo-1463852247062-1bbca38f7805-cover.jpg
 ---
 
