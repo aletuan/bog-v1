@@ -1,5 +1,5 @@
 ---
-title: Callback, Promise, and Async\Await
+title: Callback, Promise, Async
 subTitle: If you want to promise, then do it right way
 cover: photo-promise-cover.png
 ---
