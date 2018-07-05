@@ -207,4 +207,25 @@ for(let i of m) {
 m.forEach((key, value) => console.log(`${key} - ${value}`));
 ```
 
+### Promises
+
+Promise support `Callback hell` issue in JavaScript with more readable syntax.
+Let refer to another post *Callback, Promise and Async/Await* to get more details about Java async way.
+
+An example of Promises
+
+```js
+const getFn = () => {
+   let msg = "say hi";
+   return new Promise(
+      function(resolve, reject) {
+         setTimeout(resolve(msg), 1000);
+      }
+   );
+};
+
+const printFn = msg => console.log(msg);
+
+getFn().then(printFn);
+```
 
