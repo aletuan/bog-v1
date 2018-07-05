@@ -11,9 +11,9 @@ There are the features that will be covered in the following sections:
 * Arrow functions and let keyword; block scope
 * Classes and inheritance
 * Destructured assignment, Default parameters
-* Interator and Maps
-* Promises; Rest parameters; Set
-* Spread operator; Template literals
+* Interator and Maps, Set
+* Promises; Async
+* Rest parameters; Spread operator;
 
 ### Arrow function and let keyword
 
@@ -245,4 +245,6 @@ const sum = (...args) => args.reduce((prev, cur) => prev+cur, 10);
 const input = [1,2,3];
 sum(...input); // 16
 ```
+
+
 
