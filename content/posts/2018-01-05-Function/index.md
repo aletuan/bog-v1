@@ -1,7 +1,7 @@
 ---
 title: Functional style
 subTitle: It let me play by my way
-cover: photo-compose-cover.png
+cover: photo-compose-cover.jpg
 ---
 
 Before going into the some theories of functional programming, let make a recap about some `transform functions` that are introduced in Array.Prototype. These functions take an array as input, making some logic filter or calculation to transform and produce a new array (without change the input)
