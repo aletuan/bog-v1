@@ -5,7 +5,7 @@ menuTitle: Projects
 
 ### Healthcare mobile application 
 
-Description:
+*Description*:
 
 An React Native application running in both Android and iOS platform. Mobile communicate with external devices (station, headset) via Bluetooth (BLE and SPP) to tracking and record health data.
 
@@ -21,7 +21,8 @@ Following are the major features of application:
 
 ![](./photo-activities-tracking-page.png)
 ![](./photo-brain-condition-page.png)
-![](./photo-brain-dashboard-page.png)
+![](./photo-dashboard-page.png)
+![](./photo-food-record-page.png)
 
 Technology stack:
 * Front-end: React Native, Native libraries in iOS, Android
