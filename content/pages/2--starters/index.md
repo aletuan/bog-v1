@@ -1,20 +1,32 @@
 ---
 title: Projects
-menuTitle: My starters
+menuTitle: My Projects in React / React Native
 ---
 
-[Personal**Blog**](https://github.com/greglobinski/gatsby-starter-personal-blog) is not my first [GatsbyJS](https://www.gatsbyjs.org/) starter.
+### Healthcare mobile application 
 
-![SimpleLanding](./gatsby-starter-simple-landing.png)
+Description:
 
-### SimpleLanding
+An React Native application running in both Android and iOS platform. Mobile communicate with external devices (station, headset) via Bluetooth (BLE and SPP) to tracking and record health data.
 
-As the name says, it is a landing page starter.
-[Demo](https://gatsby-starter-simple-landing.greglobinski.com/) | [Github repo](https://github.com/greglobinski/gatsby-starter-simple-landing)
+Following are the major features of application:
+* Registration and authentication (Support OAuth2)
+* Multi-languages support (English, Korean)
+* Dashboard view to display summary data
+* Setting application (Wifi, Bluetooth, Display, Music)
+* Food, Water, Caffeine, Alcohol, Cigarette record
+* Activities tracking (Sleep and Walking)
+* Brain waves displaying
+* Alarm Settings and Notification
 
-![StyledBlog](./gatsby-styled-blog-starter.jpg)
+[](./photo-activities-tracking-page.png)
+[](./photo-brain-condition-page.png)
 
-### StyledBlog
+Technology stack:
+* Front-end: React Native, Native libraries in iOS, Android
+* Back-end: AWS, Flask, Couchbase server
 
-That was my first Gatsby starter. It is a forefather of the starter you are looking at now.
-[Github repo](https://github.com/greglobinski/gatsby-styled-blog-starter)
+Project development methodology:
+* Agile / Scrum
+
+### IoT Trunknet application
