@@ -1,6 +1,6 @@
 ---
 title: Projects
-menuTitle: My Projects in React / React Native
+menuTitle: Projects
 ---
 
 ### Healthcare mobile application 
