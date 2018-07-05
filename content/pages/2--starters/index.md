@@ -59,3 +59,24 @@ menuTitle: Projects
 * Back-end: Java 8, Spring boot, MySQL, GrapQL, Azure cloud techs
 * Testing: Mocha, Chai (Unit Testing), Enzynme (React UI), Selenium (Automation testing)
 * CI/CD: VSTS 
+
+---
+
+##Econavi App
+
+> Application monitors and optimize Panasonic Android mobile’s energy con- sumption by learning from the gathered sensor data, battery level. It then adjusts to the optimal energy-efficiency setting (brightness, connection, time- out)
+
+**Feature**
+
+* Creating application widget to display critical information
+* Provide setting configuration to switch between Normal and Eco mode to
+reduce battery consumption automatically or manually
+* Support multi-language features
+* Creating new UI application when running in tablet device
+
+*Note:* This is a system application (or built-in application). It means that application is delivered with specified mobile type of a specific manufacture since it can involve native api to get data from sensor or control battery mechanism of mobile app.
+
+**Screenshot**
+
+![](photo-home-page.png)
+![](photo-setting-page.png)
