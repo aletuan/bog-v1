@@ -58,7 +58,10 @@ menuTitle: Projects
 * Front-end: JavaScript ES6, React 15.6, Redux, Webpack
 * Back-end: Java 8, Spring boot, MySQL, GrapQL, Azure cloud techs
 * Testing: Mocha, Chai (Unit Testing), Enzynme (React UI), Selenium (Automation testing)
-* CI/CD: VSTS 
+* CI/CD: Visual Studio Team Service
+
+**Project methodology**
+* Agile / Scrum
 
 ---
 
@@ -80,3 +83,6 @@ reduce battery consumption automatically or manually
 
 ![](photo-home-page.png)
 ![](photo-setting-page.png)
+
+**Project methodology**
+* Waterfall with short-cycle due to the short duration of making new mobile model.
