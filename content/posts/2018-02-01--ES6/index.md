@@ -238,5 +238,11 @@ const sum = (...args) => args.reduce((prev, cur) => prev+cur, 10);
 sum(1,2,3); // 16
 ```
 
+The `spread operator` is able to convert an array into the list of parameters. So we can combine with `rest parameter` as below:
 
+```js
+const sum = (...args) => args.reduce((prev, cur) => prev+cur, 10);
+const input = [1,2,3];
+sum(...input); // 16
+```
 
