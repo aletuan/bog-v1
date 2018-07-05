@@ -19,6 +19,4 @@ There is a better way to re-write example with `stateful function` style:
 
 **Conclusion**
 
-Closure is not an easy term that every developer could understand. But it have been used in many other techniques of the programming language (not only privacy data access), but also partical function, curry function (function composing). Understanding Closure will help us to make a better program
-
-#javascript
+Closure is not an easy term that every developer could understand. But it have been used in many other techniques of the programming language (not only privacy data access), but also partical function, curry function (function composing). Understanding Closure will help us to make a better program.
