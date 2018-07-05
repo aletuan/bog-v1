@@ -229,3 +229,14 @@ const printFn = msg => console.log(msg);
 getFn().then(printFn);
 ```
 
+The `rest parameter` syntax allows us to represent an indefinite number of arguments as an array
+
+For example:
+
+```js
+const sum = (...args) => args.reduce((prev, cur) => prev+cur, 10);
+sum(1,2,3); // 16
+```
+
+
+
