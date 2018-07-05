@@ -19,8 +19,9 @@ Following are the major features of application:
 * Brain waves displaying
 * Alarm Settings and Notification
 
-[](./photo-activities-tracking-page.png)
-[](./photo-brain-condition-page.png)
+![](./photo-activities-tracking-page.png)
+![](./photo-brain-condition-page.png)
+![](./photo-brain-dashboard-page.png)
 
 Technology stack:
 * Front-end: React Native, Native libraries in iOS, Android
