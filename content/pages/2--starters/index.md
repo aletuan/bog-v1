@@ -24,11 +24,11 @@ Following are the major features of application:
 ![](./photo-dashboard-page.png)
 ![](./photo-food-record-page.png)
 
-Technology stack:
-* Front-end: React Native, Native libraries in iOS, Android
+*Technology stack*
+* Front-end: `React Native`, Native libraries in iOS, Android
 * Back-end: AWS, Flask, Couchbase server
 
-Project development methodology:
+*Project development methodology*
 * Agile / Scrum
 
 ### IoT Trunknet application
