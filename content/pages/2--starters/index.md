@@ -32,6 +32,8 @@ menuTitle: Projects
 **Project methodology**
 * Agile / Scrum
 
+---
+
 ### IoT Trunknet application
 
 > Enables capturing and processing of big volumes of truck data to provide valuable information to the customers. Its services are bundled into groups that provide the customer insights into their fleet’s performance and health
