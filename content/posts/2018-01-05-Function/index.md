@@ -50,7 +50,7 @@ const data = [['a', 'b', 'c'], ['c', 'd', 'a']];
 const flattened = data.reduce((accu, item) => acc.concat(item), []);
 ```
 
-It's easy right. How about if we want to get only unique element from `data`, here it is:
+It's easy right. How about if we want to get only unique element from `data`, let apply the unique feature of new `Set` structure of ES6, here it is:
 
 ```js
 const data = [['a', 'b', 'c'], ['c', 'd', 'a']];
