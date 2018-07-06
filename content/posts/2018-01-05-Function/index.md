@@ -54,7 +54,7 @@ It's easy right. How about if we want to get only unique element from `data`, le
 
 ```js
 const data = [['a', 'b', 'c'], ['c', 'd', 'a']];
-const flattened = data.reduce((accu, item) => acc.concat(item), []);
+const flattened = data.reduce((acc, item) => acc.concat(item), []);
 const unique = flattened.reduce((acc, item) => acc.add(item), new Set([]));
 // any way to use only one time of reduce
 ```
