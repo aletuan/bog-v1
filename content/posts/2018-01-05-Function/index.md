@@ -43,6 +43,23 @@ myFriends.filter(isMale); // John, Mike, Richard, Keith
 
 `Array.Prototype.reduce()`, this is a general-purpose array transformation.  It lets you iterate over a list, apply a function to an accumulated value, and next item in the list, until the iteration is complete.
 
+Using `reduce` function, some complex request can be resolved quite quickly. Want to flattening a structure, here is an example:
+
+```js
+const data = [['a', 'b', 'c'], ['c', 'd', 'a']];
+const flattened = data.reduce((accu, item) => acc.concat(item), []);
+```
+
+It's easy right. How about if we want to get only unique element from `data`, here it is:
+
+```js
+const data = [['a', 'b', 'c'], ['c', 'd', 'a']];
+const flattened = data.reduce((accu, item) => acc.concat(item), []);
+const unique = flattened.reduce((acc, item) => acc.add(item), new Set([]));
+// any way to use only one time of reduce
+```
+
+
 `Reduce` is special one since it can define all other transform functions like `map()` or `filter`:
 
 ```js
