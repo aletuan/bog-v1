@@ -1,7 +1,7 @@
 ---
 title: Arrow function
 subTitle: When less is more
-cover: photo-react-components-cover.jpg
+cover: photo-arrow-function-cover.jpg
 ---
 
 Arrow function is a new fundamental building blocks of building modern web application. The new syntax both make your code more concise while also making the `this` keyword more manageable.
