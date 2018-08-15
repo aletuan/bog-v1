@@ -1,7 +1,7 @@
 ---
 title: GraphQL Server with Node.js and Express
 subTitle: REST v2.0
-cover: photo-graphql--cover.png
+cover: photo-graphql-cover.png
 ---
 
 ## Section A
