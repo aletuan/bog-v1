@@ -8,7 +8,7 @@ A React application is made up of a ton of smaller and composable component.  Ea
 
 ## Start a simple component
 
-React components implements `render()` method thats takes input data and return whats to display. It uses an XML-like syntax called JSX. 
+React components implements *render()* method thats takes input data and return whats to display. It uses an XML-like syntax called JSX. 
 
 Here is a simple sample:
 
@@ -29,7 +29,7 @@ ReactDOM.render(
 );
 ```
 
-In this sample, input data is passed into the component by using `this.props`. In the next section, we will talk more about component's data.
+In this sample, input data is passed into the component by using *this.props*. In the next section, we will talk more about component's data.
 
 ## Props and State
 
@@ -37,17 +37,17 @@ Since the component is the UI part, it is able to display or get input data from
 
 ### props
 
-A component accepts an input or `this.props`, processes it, and render with some JSX code.
+A component accepts an input or *this.props*, processes it, and render with some JSX code.
 
 An important thing to remember: props is immutable and top-down flow
 
-		* Top-down flow: props is data that parent component pass down to its children
+- Top-down flow: props is data that parent component pass down to its children
 
-		* Immutable: child component cannot modify its props.
+- Immutable: child component cannot modify its props.
 
 ### state
 
-A component can maintain internal state data via `this.state`. When the component's state is changed, the render markup will be updated by re-invoking `render()`
+A component can maintain internal state data via *this.state*. When the component's state is changed, the render markup will be updated by re-invoking *render()*
 
 ```js
 class Timer extends React.Component {
@@ -88,14 +88,13 @@ ReactDOM.render(<Timer />, mountNode);
 
 In additional, there are some highlight about component’s state:
 
-	* We do not modify state directly, instead, using `setState()`
-	* State updates may be asynchronous. Beware if we want to use current state to generate a new state
-	* State updates are merged
-
+- We do not modify state directly, instead, using *setState()*
+- State updates may be asynchronous. Beware if we want to use current state to generate a new state
+- State updates are merged
 
 ### setState() is asyncronous
 
-React may batch several `setState()` call into a single update for performance. Because `this.props` and `this.state` may be updated asynchronously, we should not rely on their values for calculating the next state.
+React may batch several *setState()* call into a single update for performance. Because *this.props* and *this.state* may be updated asynchronously, we should not rely on their values for calculating the next state.
 
 This is the wrong way
 
