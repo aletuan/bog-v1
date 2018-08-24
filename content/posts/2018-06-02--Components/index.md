@@ -12,7 +12,7 @@ React components implements *render()* method thats takes input data and return 
 
 Here is a simple sample:
 
-```javascript
+```jsx
 class HelloMessage extends React.Component {
   render() {
     return (
@@ -49,7 +49,7 @@ An important thing to remember: props is immutable and top-down flow
 
 A component can maintain internal state data via *this.state*. When the component's state is changed, the render markup will be updated by re-invoking *render()*
 
-```js
+```jsx
 class Timer extends React.Component {
   constructor(props) {
     super(props);
@@ -98,7 +98,7 @@ React may batch several *setState()* call into a single update for performance. 
 
 This is the wrong way
 
-```js
+```jsx
 this.setState({
 	count: this.state.count + this.props.increment,
 });
@@ -106,7 +106,7 @@ this.setState({
 
 This is the right way
 
-```js
+```jsx
 this.setState((prevState, props) => ({
 	counter: preState.counter + props.increment
 }));
@@ -116,7 +116,7 @@ this.setState((prevState, props) => ({
 
 When your state contain several independent pieces of data (variable)
 
-```js
+```jsx
 constructor(props) {
 	super(props);
 	this.state = {
