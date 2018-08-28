@@ -6,7 +6,7 @@ cover: photo-react-components-cover.png
 
 A React application is made up of a ton of smaller and composable component.  Each component is self-sustaining, independent micro-entities that describe part of the UI.
 
-## Start a simple component
+## 1. Start a simple component
 
 React components implements *render()* method thats takes input data and return whats to display. It uses an XML-like syntax called JSX. 
 
@@ -31,7 +31,7 @@ ReactDOM.render(
 
 In this sample, input data is passed into the component by using *this.props*. In the next section, we will talk more about component's data.
 
-## Props and State
+## 2. Props and State
 
 Since the component is the UI part, it is able to display or get input data from the user.  There are two ways that the developer can combine component with data: either as **props** or **state**.  These data determine what a component rendering and how it behaves.
 
@@ -84,7 +84,7 @@ ReactDOM.render(<Timer start=0 />, mountNode);
 
 > The scope of a state is limited to the current component. State of parent component usually ends up being props of child component, so when a state is passed out of the current scope, it is referred as props.
 
-## State and Lifecycle
+## 3. State and Lifecycle
 
 A component displays UI content based on user's input. To do it, the component need to invoke some licycle hooks methods. There are some methods that we did used in the previous sample:
 
@@ -95,12 +95,21 @@ We summarize some steps has been done with Timer component:
 
 1. When *<Timer />* is passed to *ReactDOM.render()*, React call the constructor of the Timer component
 2. React call the Timer's render method, with output of *render()* method, it update DOM
-3. *componentDidMount()* is called, and ask broswer to set up timer for *tick()*
+3. *componentDidMount()* is called, and ask browswer to set up timer for *tick()*
 4. Every time calling *tick()*, state is updated, and *render()* is called again
-5. If *Timer* is removed, then *componentWillUnMount()* is called to stop timer.
+5. If *Timer* is removed, then *componentWillUnMount()* is called to stop timer 
 
+**Note**: We can remove timer from its parent component, using a conditional state variable and conditional rendering.
 
-## More highlight about State
+For example:
+
+```jsx
+{this.state.isShowTimer && 
+  <Timers start={100} />
+}
+```
+
+## 4. More highlight about State
 
 In additional, there are some highlight about component’s state:
 
@@ -174,7 +183,7 @@ The *Timer* component receive input value for *start*, without knowning whether 
 
 ![](./photo-top-down-dataflow.png)
 
-## Handling event
+## 5. Handling event
 
 Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
 
@@ -264,3 +273,58 @@ To avoid the binding the method in the constructor, there are two options:
     );
   }
 ```
+
+## 6. Conditional Rendering
+
+This is the case when we want to render only some of React components depending on the state of the application.
+
+In a simple way, we can use *if* condition, for example:
+
+```jsx
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+```
+
+We can have a shorter way by using inline if with logical *&&* operator:
+
+```jsx
+let timer =  <Timers start={100} />;
+...
+{this.state.isShowTimer && 
+  timer
+}
+```
+
+## 7. Form
+
+Form is collection of HTML form element, such as input text, input checkbox, textarea, select, file. Each element can be considered as a component whose value is controlled by form state. Since the form state control all values of form element, that React state be the **single source of truth**
+
+There are two types of component
+- *Controlled component*: is a form element whose value is controlled by React. For example, input, checkbox, textarea, select
+- *Uncontrolled component*: has value is not controlled by React. For example, file component,  since its value is read-only.
+
+Another note about form is the trick we can apply when want to handle form with multiple element. In that case, we can put **name** for element, then based on that name and element type to update element with correct data.
+
+For example:
+
+```jsx
+handleChange(event) {
+  const target = event.target;
+  const name = target.name;
+
+  // for checkbox
+  const value = target.type === 'checkbox' ? 
+    target.checked : 
+    target.value;
+
+  this.setState({
+    [name]: value,
+  });
+}
+```
+
